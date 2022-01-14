@@ -11,7 +11,7 @@ test.describe('scenarios#1', async () => {
       page.click('[aria-label="cart-button"]')
     ]);
 
-    await page.click('text=Baby Lovett Go to shop >> button');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[3]/div[1]/button/div');
 
     await Promise.all([
       page.waitForNavigation(/*{ url: 'https://shop.line.me/@babylovett/checkout/2021113015181263/' }*/),
