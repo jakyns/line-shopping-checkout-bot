@@ -15,7 +15,7 @@ test.describe('scenarios#1', async () => {
 
     await Promise.all([
       page.waitForNavigation(/*{ url: 'https://shop.line.me/@booboobabybrand/checkout/2021120615516257/' }*/),
-      page.click('text=Buy Now (1)')
+      page.click('xpath=//*[@id="0"]/div[4]/div/div/div[2]/button')
     ]);
 
     await page.click('.absolute.top-20xem');
