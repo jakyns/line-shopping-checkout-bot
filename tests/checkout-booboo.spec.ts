@@ -20,9 +20,9 @@ test.describe('scenarios#1', async () => {
 
     await page.click('.absolute.top-20xem');
 
-    await page.click('text=อภิญญา แซ่หว่อง');
-    await page.click('text=Kerry');
-    await page.click('.flex.ml-11xem.mt-5xem .icon');
+    await page.click('text=Shipping Address Manage Address อภิญญา แซ่หว่อง 293/45 หมู่บ้าน Perfect Park เฟส >> svg');
+    await page.click('text=Kerry ฿50.00 กล่องของขวัญ ส่งแบบ Kerry ฿280.00 >> svg');
+    await page.click('text=Pay with Rabbit LINE Pay Check out and earn points Pay with a credit/debit card  >> svg');
 
     await Promise.all([
       page.waitForNavigation(/*{ url: 'https://shop.line.me/@booboobabybrand/checkout/2021120615516257/' }*/),
