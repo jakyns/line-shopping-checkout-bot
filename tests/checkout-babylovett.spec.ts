@@ -15,14 +15,15 @@ test.describe('scenarios#1', async () => {
 
     await Promise.all([
       page.waitForNavigation(/*{ url: 'https://shop.line.me/@babylovett/checkout/2021113015181263/' }*/),
-      page.click('xpath=//*[@id="0"]/div[4]/div/div/div[2]/button')
+      page.click('xpath=//*[@id="0"]/div[4]/div/div/div[2]/button', { timeout: 2000 })
     ]);
 
     await page.click('.absolute.top-20xem');
 
-    await page.click('text=อภิญญา แซ่หว่อง');
-    await page.click('text=Kerry ฿40.00 >> :nth-match(div, 2)');
-    await page.click('.flex.ml-11xem.mt-5xem .icon');
+    await page.click('text=Shipping Address Manage Address อภิญญา แซ่หว่อง 293/45 หมู่บ้าน Perfect Park เฟส >> svg');
+    await page.click('text=Kerry ฿40.00 Thailand Post-EMS กทม. 1-2 วันทำการ, ตจว. 2-3 วันทำการ ฿40.00 >> svg');
+    await page.click('text=Pay with Rabbit LINE Pay Check out and earn points Pay with a credit/debit card  >> svg');
+
 
     await Promise.all([
       page.waitForNavigation(/*{ url: 'https://shop.line.me/@babylovett/checkout/2021113015181263/bank-inform' }*/),
