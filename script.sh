@@ -1,1 +1,3 @@
-while sleep 1; do npx playwright test tests/checkout-babylovett.spec.ts; done
+while sleep 1; do
+    npx playwright test tests/checkout-babylovett.spec.ts;
+done
