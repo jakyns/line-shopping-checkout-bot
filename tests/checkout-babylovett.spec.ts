@@ -20,9 +20,9 @@ test.describe('scenarios#1', async () => {
 
     await page.click('.absolute.top-20xem');
 
-    await page.click('text=Shipping Address Manage Address อภิญญา แซ่หว่อง 293/45 หมู่บ้าน Perfect Park เฟส >> svg');
-    await page.click('text=Kerry ฿40.00 Thailand Post-EMS กทม. 1-2 วันทำการ, ตจว. 2-3 วันทำการ ฿35.00 >> svg');
-    await page.click('text=Pay with Rabbit LINE Pay Pay with a credit/debit card Powered by >> svg');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[4]/div[2]/div[1]');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[6]/div[2]/div[1]');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[8]/div[2]/div[1]/div[2]/div[1]');
 
     await Promise.all([
       page.waitForNavigation(/*{ url: 'https://shop.line.me/@babylovett/checkout/2021113015181263/bank-inform' }*/),

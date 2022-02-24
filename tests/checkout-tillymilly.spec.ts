@@ -20,9 +20,9 @@ test.describe('scenarios#1', async () => {
 
     await page.click('.absolute.top-20xem');
 
-    await page.click('label:has-text("อภิญญา แซ่หว่อง 293/45 หมู่บ้าน Perfect Park เฟส 4 ซ.ร่มเกล้า 6/1 แขวง/เขต มีนบุ")');
-    await page.click('text=Shipping Kerry ฿50.00 >> svg');
-    await page.click('text=Pay with Rabbit LINE Pay Pay with a credit/debit card Powered by >> svg');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[4]/div[2]/div[1]');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[6]/div[2]/div[1]');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[8]/div[2]/div[1]/div[2]/div[1]');
 
     await Promise.all([
       page.waitForNavigation(/*{ url: 'https://shop.line.me/@tillymilly/checkout/2021121816240500/bank-inform' }*/),
