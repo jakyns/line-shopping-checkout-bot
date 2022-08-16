@@ -12,14 +12,15 @@ test.describe('scenarios#1', async () => {
       page.click('xpath=//*[@id="0"]/div[4]/div/div/div[2]/button', { timeout: 1000 })
     ]);
 
-    await page.click('.absolute.top-20xem');
+    await new Promise(res => setTimeout(res, 1000));
+    await page.click('.absolute.top-20xem')
 
     await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[4]/div[2]/div[1]');
     await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[6]/div[2]/div[1]');
     await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[8]/div[2]/div[1]/div[2]/div[1]');
 
     await Promise.all([
-      page.waitForNavigation(/*{ xpath: ' //*[@id="app-store-front"]/div/div[2]/div[17]/button' }*/),
+      page.waitForNavigation(/*{ xpath: '//*[@id="app-store-front"]/div/div[2]/div[17]/button' }*/),
       page.click('button:has-text("Place Order")')
     ]);
   });
