@@ -9,11 +9,10 @@ test.describe('scenarios#1', async () => {
 
     await Promise.all([
       page.waitForNavigation(/*{ xpath: '//*[@id="app-store-front"]/div/div[2]/div[3]/div[1]/button/div' }*/),
-      page.click('xpath=//*[@id="0"]/div[4]/div/div/div[2]/button', { timeout: 1000 })
+      page.click('xpath=//*[@id="0"]/div[3]/div/div[2]/button', { timeout: 1000 })
     ]);
 
-    await new Promise(res => setTimeout(res, 1000));
-    await page.click('.absolute.top-20xem')
+    await new Promise(res => setTimeout(res, 2000));
 
     await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[4]/div[2]/div[1]');
     await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[6]/div[2]/div[1]');
