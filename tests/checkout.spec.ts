@@ -14,9 +14,8 @@ test.describe('scenarios#1', async () => {
 
     await new Promise(res => setTimeout(res, 2000));
 
-    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[4]/div[2]/div[1]');
-    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[6]/div[2]/div[1]');
-    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[8]/div[2]/div[1]/div[2]/div[1]');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[4]');
+    await page.click('xpath=//*[@id="app-store-front"]/div/div[2]/div[5]/div[2]/div[1]/div[2]/div[1]/label/div[2]/div/div');
 
     await Promise.all([
       page.waitForNavigation(/*{ xpath: '//*[@id="app-store-front"]/div/div[2]/div[17]/button' }*/),
